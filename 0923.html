@@ -14,50 +14,45 @@
             }
         */
         /* 選擇器的種類
-            HTML_tag {  }
             #id {       }
             .class {    }
+            HTML_tag {  }
         */
-        p {
-            margin: 0;
-        }
+        /* 顏色
+            1.color name
+            2.#色碼 #RRGGBB 00~FF
+            3.rgb(r,g,b) 0~255
+            4.rgba(r,g,b,a) a:可見度 0~1
+            5.hsl(色相,彩度,亮度)
+            6.hsla(0~360,0~100%,0~100%,0~1)        
+        */
+        /* 前景：文字顏色(color)
+           背景(background)：
+                顏色(background-color)
+                圖像(background-image)
+        */
         div {
-            margin-top: 20px;
-            margin-bottom: 20px;
-        }
-        span {
             background-color: yellow;
+            width:300px;
+            height:50px;
+            margin-bottom: 10px;
         }
-        #sp1 {
-            background-color: red;
-            width: 200px;
-            height: 100px;
-            display: inline;
+        /* 漸層 not a color, is a image
+            1.線性漸層 linear-gradient(), to top/right/bottom/left => 0~360deg
+            2.放射漸層
+            3.圓錐漸層
+        */
+        #d1 {
+            background: linear-gradient(125deg,red,yellow);
         }
-        #sp2 {
-            width: 200px;
-            height: 100px;
-            display: inline-block;
-        }
-        #sp3 {
-            display: block;
-            width: 200px;
-            height: 100px;
-        }
-        .cs1 {
-            color:red;
-        }
-        .cs2 {
-            background-color: green;
+        #d2 {
+            background-image: linear-gradient(90deg,red,orange,yellow,green,blue,indigo,violet);
         }
     </style>
 </head>
 <body>
-    <p>P段落</p>
-    <div class="cs1">區塊元素</div>
-    <span id="sp1">行內元素</span>
-    <span id="sp2" class="cs2">行內區塊元素</span>
-    <span id="sp3" class="cs1 cs2">區塊元素</span>
+    <div id="d1"></div>
+    <div id="d2"></div>
 
 
 </body>
